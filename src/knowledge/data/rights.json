@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "title": "Rechte unterwegs (Bahn, Deutschland)",
+  "updatedAt": "2026-10-24",
+  "entries": [
+    {
+      "id": "other_train",
+      "title": "Anderen Zug nehmen (Zugbindung aufgehoben)",
+      "text": "Bei einer erwarteten Verspätung am Zielbahnhof von mindestens 20 Minuten (nationale Reisen) bzw. 60 Minuten (internationale Reisen) darf man die Fahrt mit einem anderen Zug fortsetzen, auch auf anderer Strecke oder später. Die Zugbindung ist auch bei Zugausfall, ausgefallenem Halt, verpasstem Anschluss oder verfrühter Abfahrt aufgehoben.",
+      "source": { "title": "Deutsche Bahn: Fahrgastrechte – rechtliche Regelungen", "url": "https://www.bahn.de/service/informationen-buchung/fahrgastrechte/rechtliche-regelungen" }
+    },
+    {
+      "id": "local_ticket_higher_train",
+      "title": "Mit Nahverkehrsticket in IC/EC/ICE",
+      "text": "Mit einer Nahverkehrsfahrkarte darf man bei den genannten Verspätungen auch höherwertige Züge (IC/EC/ICE) nutzen: zuerst eine Fahrkarte dafür kaufen, dann den Preis beim Servicecenter Fahrgastrechte zurückfordern. Ausnahme: erheblich ermäßigte Fahrkarten wie Deutschland-Ticket oder Länder-Tickets.",
+      "source": { "title": "Deutsche Bahn: FAQ Fahrgastrechte", "url": "https://bahn.de/faq/pk/service/buchung/fahrgastrechte" }
+    },
+    {
+      "id": "other_transport_100min",
+      "title": "Weiterfahrt mit anderen Verkehrsmitteln nach 100 Minuten",
+      "text": "Wenn das Eisenbahnunternehmen nicht innerhalb von 100 Minuten nach der planmäßigen Abfahrtszeit über Alternativen informiert, darf man mit anderen Eisenbahnen, einem Reisebus oder einem Bus des Regionalverkehrs weiterfahren. Taxi, Flug oder private Abholung werden in diesem Fall nicht erstattet.",
+      "source": { "title": "Deutsche Bahn: Fahrgastrechte – rechtliche Regelungen", "url": "https://www.bahn.de/service/informationen-buchung/fahrgastrechte/rechtliche-regelungen" }
+    },
+    {
+      "id": "taxi_120",
+      "title": "Taxi oder anderes Verkehrsmittel (bis 120 Euro)",
+      "text": "Kosten für ein anderes Verkehrsmittel (z. B. Taxi) werden bis 120 Euro erstattet, wenn die planmäßige Ankunft zwischen 0 und 5 Uhr liegt und eine Verspätung von mindestens 60 Minuten erwartet wird, oder wenn die letzte Verbindung des Tages ausfällt und das Ziel ohne anderes Verkehrsmittel nicht bis 24 Uhr erreichbar ist. Voraussetzung: Das Unternehmen bietet keine andere Beförderung an und ist vor Ort nicht erreichbar. Bietet es eine Beförderung an, hat diese Vorrang. Belege aufheben.",
+      "source": { "title": "Deutsche Bahn: Fahrgastrechte – rechtliche Regelungen", "url": "https://www.bahn.de/service/informationen-buchung/fahrgastrechte/rechtliche-regelungen" }
+    },
+    {
+      "id": "hotel",
+      "title": "Übernachtung",
+      "text": "Angemessene Übernachtungskosten werden erstattet, wenn die Weiterfahrt am selben Tag nicht möglich oder nicht zumutbar ist, das Unternehmen keine Unterkunft stellt und vor Ort nicht erreichbar ist. Belege aufheben.",
+      "source": { "title": "Deutsche Bahn: Fahrgastrechte – rechtliche Regelungen", "url": "https://www.bahn.de/service/informationen-buchung/fahrgastrechte/rechtliche-regelungen" }
+    },
+    {
+      "id": "refund_abandon",
+      "title": "Reise nicht antreten oder abbrechen",
+      "text": "Wird eine Verspätung am Ziel von mindestens 60 Minuten erwartet, kann man auf die Fahrt verzichten und bekommt den vollen Fahrpreis erstattet, bzw. anteilig bei einer Teilstrecke. Die Erstattung erfolgt per Überweisung.",
+      "source": { "title": "Deutsche Bahn: Fahrgastrechte – rechtliche Regelungen", "url": "https://www.bahn.de/service/informationen-buchung/fahrgastrechte/rechtliche-regelungen" }
+    },
+    {
+      "id": "reservation_fee",
+      "title": "Reservierung verfallen",
+      "text": "Konnte ein reservierter Platz wegen der Verspätung nicht genutzt werden, erstattet die DB auf Antrag die Reservierungsgebühr (formlos beim Servicecenter Fahrgastrechte oder in einer DB-Verkaufsstelle).",
+      "source": { "title": "Deutsche Bahn: FAQ Fahrgastrechte", "url": "https://bahn.de/faq/pk/service/buchung/fahrgastrechte" }
+    },
+    {
+      "id": "compensation_later",
+      "title": "Entschädigung nach der Fahrt",
+      "text": "Ab 60 Minuten Verspätung am Ziel gibt es 25 % des Fahrpreises, ab 120 Minuten 50 %. Beträge unter 4 Euro werden nicht ausgezahlt. Für Zeitkarten gibt es Pauschalen pro verspäteter Fahrt. Die Entschädigung kann man nach der Reise in dieser App als Ticket prüfen und beantragen.",
+      "source": { "title": "Deutsche Bahn: Fahrgastrechte – rechtliche Regelungen", "url": "https://www.bahn.de/service/informationen-buchung/fahrgastrechte/rechtliche-regelungen" }
+    },
+    {
+      "id": "arbitration",
+      "title": "Wenn das Unternehmen ablehnt",
+      "text": "Zuerst beim Servicecenter Widerspruch einlegen. Danach kann man sich an die Schlichtungsstelle Reise & Verkehr e. V. (früher söp) wenden, Fasanenstraße 81, 10623 Berlin.",
+      "source": { "title": "Schlichtungsstelle Reise & Verkehr", "url": "https://www.schlichtung-reise-und-verkehr.de/" }
+    }
+  ]
+}

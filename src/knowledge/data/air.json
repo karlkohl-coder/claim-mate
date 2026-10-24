@@ -1,0 +1,164 @@
+{
+  "schemaVersion": 1,
+  "mode": "air",
+  "title": "Fluggastrechte (Verordnung (EG) Nr. 261/2004)",
+  "updatedAt": "2026-10-24",
+  "rules": {
+    "coveredCountries": [
+      {
+        "validFrom": "2005-02-17",
+        "status": "verified",
+        "note": "Art. 3 Abs. 1: Abflug in einem Mitgliedstaat, oder Abflug in einem Drittstaat in einen Mitgliedstaat mit einem Luftfahrtunternehmen der Gemeinschaft. EU-27 geprüft (2026-10-24). IS, NO (EWR) und CH (Luftverkehrsabkommen EU–Schweiz) wenden die Verordnung über Abkommen an – nicht separat geprüft. Überseegebiete mit eigenem ISO-Code (z. B. RE, GP, MQ) fehlen noch.",
+        "sources": [
+          {
+            "title": "EUR-Lex: Verordnung (EG) Nr. 261/2004",
+            "url": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32004R0261",
+            "reference": "Art. 3 Abs. 1"
+          }
+        ],
+        "value": {
+          "countries": [
+            "AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE",
+            "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE",
+            "IS", "NO", "CH"
+          ]
+        }
+      }
+    ],
+    "compensationBands": [
+      {
+        "validFrom": "2005-02-17",
+        "status": "verified",
+        "note": "Art. 7 Abs. 1: 250 EUR bis 1500 km; 400 EUR für innergemeinschaftliche Flüge über 1500 km und andere Flüge 1500–3500 km; 600 EUR sonst. Entfernung nach Großkreismethode zum letzten Zielort (Art. 7 Abs. 1 und 4).",
+        "sources": [
+          {
+            "title": "EUR-Lex: Verordnung (EG) Nr. 261/2004",
+            "url": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32004R0261",
+            "reference": "Art. 7 Abs. 1 und 4"
+          }
+        ],
+        "value": {
+          "bands": [
+            { "upToKm": 1500, "amountEur": 250 },
+            { "upToKm": 3500, "amountEur": 400 },
+            { "upToKm": null, "amountEur": 600, "withinCoveredAreaAmountEur": 400 }
+          ]
+        }
+      }
+    ],
+    "delayThreshold": [
+      {
+        "validFrom": "2009-11-19",
+        "status": "verified",
+        "note": "EuGH, Urteil vom 19.11.2009, C-402/07 und C-432/07 (Sturgeon): Ausgleichsanspruch bei Ankunft am Endziel drei Stunden oder mehr nach der planmäßigen Ankunftszeit.",
+        "sources": [
+          {
+            "title": "EUR-Lex: EuGH, Urteil C-402/07 (Sturgeon)",
+            "url": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:62007CJ0402",
+            "reference": "Tenor Nr. 2"
+          }
+        ],
+        "value": { "minDelayMinutes": 180 }
+      }
+    ],
+    "reroutingReduction": [
+      {
+        "validFrom": "2005-02-17",
+        "status": "verified",
+        "note": "Art. 7 Abs. 2: Kürzung um 50 %, wenn der Alternativflug höchstens 2 h (bis 1500 km), 3 h (innergemeinschaftlich über 1500 km bzw. 1500–3500 km) oder 4 h (sonst) später ankommt. Innergemeinschaftliche Flüge über 3500 km nutzen das 3-h-Band (in der Engine umgesetzt).",
+        "sources": [
+          {
+            "title": "EUR-Lex: Verordnung (EG) Nr. 261/2004",
+            "url": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32004R0261",
+            "reference": "Art. 7 Abs. 2"
+          }
+        ],
+        "value": {
+          "percent": 50,
+          "bands": [
+            { "upToKm": 1500, "maxLaterArrivalMinutes": 120 },
+            { "upToKm": 3500, "maxLaterArrivalMinutes": 180 },
+            { "upToKm": null, "maxLaterArrivalMinutes": 240 }
+          ]
+        }
+      }
+    ],
+    "cancellationNotice": [
+      {
+        "validFrom": "2005-02-17",
+        "status": "verified",
+        "note": "Art. 5 Abs. 1 c: kein Ausgleich bei Unterrichtung mind. zwei Wochen vorher; zwischen zwei Wochen und sieben Tagen mit Alternativflug höchstens 2 h früher / 4 h später; weniger als sieben Tage mit Alternativflug höchstens 1 h früher / 2 h später.",
+        "sources": [
+          {
+            "title": "EUR-Lex: Verordnung (EG) Nr. 261/2004",
+            "url": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32004R0261",
+            "reference": "Art. 5 Abs. 1 Buchst. c"
+          }
+        ],
+        "value": {
+          "noCompensationFromNoticeDays": 14,
+          "windows": [
+            { "minNoticeDays": 7, "maxNoticeDays": 13, "maxEarlierDepartureMinutes": 120, "maxLaterArrivalMinutes": 240 },
+            { "minNoticeDays": 0, "maxNoticeDays": 6, "maxEarlierDepartureMinutes": 60, "maxLaterArrivalMinutes": 120 }
+          ]
+        }
+      }
+    ],
+    "exemptCauses": [
+      {
+        "validFrom": "2005-02-17",
+        "status": "verified",
+        "note": "Art. 5 Abs. 3 mit Erwägungsgründen 14 und 15: außergewöhnliche Umstände, insbesondere politische Instabilität, Wetterbedingungen, Sicherheitsrisiken, Entscheidungen des Flugverkehrsmanagements. Streiks des eigenen Personals sind laut EuGH-Rechtsprechung keine außergewöhnlichen Umstände (Urteile nicht abgerufen) und daher nicht aufgenommen. Vogelschlag (EuGH C-315/15) ebenfalls nicht abgerufen und nicht aufgenommen. Die Airline muss die Umstände nachweisen.",
+        "sources": [
+          {
+            "title": "EUR-Lex: Verordnung (EG) Nr. 261/2004",
+            "url": "https://eur-lex.europa.eu/legal-content/DE/TXT/?uri=CELEX:32004R0261",
+            "reference": "Art. 5 Abs. 3, Erwägungsgründe 14 und 15"
+          }
+        ],
+        "value": { "causes": ["weather", "air_traffic_control", "security", "other_extraordinary"] }
+      }
+    ],
+    "claimDeadline": [
+      {
+        "validFrom": "2005-02-17",
+        "status": "verified",
+        "note": "Die Verordnung regelt keine Frist; es gilt nationales Recht. Deutschland: regelmäßige Verjährung drei Jahre (§ 195 BGB), Beginn mit Schluss des Jahres der Entstehung (§ 199 Abs. 1 BGB). Bei Flügen mit anderem anwendbaren Recht kann die Frist abweichen.",
+        "sources": [
+          { "title": "§ 195 BGB", "url": "https://www.gesetze-im-internet.de/bgb/__195.html" },
+          { "title": "§ 199 BGB", "url": "https://www.gesetze-im-internet.de/bgb/__199.html", "reference": "Abs. 1" }
+        ],
+        "value": { "amount": 3, "unit": "years", "from": "end_of_year_of_journey" }
+      }
+    ],
+    "submission": [
+      {
+        "validFrom": "2005-02-17",
+        "status": "verified",
+        "note": "Antrag direkt an die ausführende Airline; bei Ablehnung Schlichtungsstelle Reise & Verkehr (früher söp).",
+        "sources": [
+          { "title": "Schlichtungsstelle Reise & Verkehr", "url": "https://www.schlichtung-reise-und-verkehr.de/" }
+        ],
+        "value": {
+          "channels": [
+            {
+              "kind": "online",
+              "label": {
+                "de": "Formular auf der Website der Airline (unter „Hilfe“ oder „Kontakt“)",
+                "en": "The airline's website form (under “Help” or “Contact”)"
+              }
+            },
+            {
+              "kind": "online",
+              "label": {
+                "de": "Schlichtungsstelle Reise & Verkehr, falls die Airline ablehnt",
+                "en": "Arbitration body Schlichtungsstelle Reise & Verkehr if the airline refuses"
+              },
+              "url": "https://www.schlichtung-reise-und-verkehr.de/"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

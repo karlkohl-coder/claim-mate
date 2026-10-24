@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "mode": "rail",
+  "title": "Fahrgastrechte Bahn (EU-VO 2021/782, Angaben der Deutschen Bahn)",
+  "updatedAt": "2026-10-24",
+  "rules": {
+    "delayCompensation": [
+      {
+        "validFrom": "2023-06-07",
+        "status": "verified",
+        "note": "Geprüft am 2026-10-24 auf bahn.de (Abschnitt 'Entschädigung bei verspäteter Ankunft am Zielbahnhof'). Hin- und Rückfahrt: Preis je Fahrt, sonst die Hälfte des Preises.",
+        "sources": [
+          {
+            "title": "Deutsche Bahn: Fahrgastrechte – rechtliche Regelungen",
+            "url": "https://www.bahn.de/service/informationen-buchung/fahrgastrechte/rechtliche-regelungen",
+            "reference": "Entschädigung bei verspäteter Ankunft am Zielbahnhof (Art. 19 VO (EU) 2021/782)"
+          }
+        ],
+        "value": {
+          "tiers": [
+            { "minDelayMinutes": 60, "percentOfPrice": 25 },
+            { "minDelayMinutes": 120, "percentOfPrice": 50 }
+          ],
+          "returnTicketLegPercent": 50
+        }
+      }
+    ],
+    "minimumPayout": [
+      {
+        "validFrom": "2023-06-07",
+        "status": "verified",
+        "note": "bahn.de: 'Entschädigungsbeträge unter 4 Euro werden nicht ausgezahlt.' Gilt laut DB auch für Zeitfahrkarten des Nahverkehrs.",
+        "sources": [
+          {
+            "title": "Deutsche Bahn: Fahrgastrechte – rechtliche Regelungen",
+            "url": "https://www.bahn.de/service/informationen-buchung/fahrgastrechte/rechtliche-regelungen"
+          }
+        ],
+        "value": { "amountEur": 4 }
+      }
+    ],
+    "flatRateCompensation": [
+      {
+        "validFrom": "2023-06-07",
+        "status": "verified",
+        "note": "bahn.de 'Zeitkarten: Entschädigung pro Fahrt' ab 60 Minuten: Fernverkehr 5/7,50 EUR, Nahverkehr 1,50/2,25 EUR, BahnCard 100 10/15 EUR (2./1. Klasse). Gesamt max. 25 % des Zeitkartenwertes (noch nicht in der Engine). Deutschlandticket ist in der DB-FAQ als Zeitfahrkarte genannt, aber nicht ausdrücklich in der Pauschalen-Liste: hier als Nahverkehrs-Zeitkarte eingeordnet (Auslegung, vor Produktivbetrieb bestätigen).",
+        "sources": [
+          {
+            "title": "Deutsche Bahn: Fahrgastrechte – rechtliche Regelungen",
+            "url": "https://www.bahn.de/service/informationen-buchung/fahrgastrechte/rechtliche-regelungen",
+            "reference": "Zeitkarten: Entschädigung pro Fahrt"
+          },
+          { "title": "Deutsche Bahn: FAQ Fahrgastrechte", "url": "https://bahn.de/faq/pk/service/buchung/fahrgastrechte" }
+        ],
+        "value": {
+          "deutschlandticket": { "minDelayMinutes": 60, "class2Eur": 1.5 },
+          "season_ticket": { "minDelayMinutes": 60, "class2Eur": 1.5, "class1Eur": 2.25 },
+          "season_ticket_long_distance": { "minDelayMinutes": 60, "class2Eur": 5, "class1Eur": 7.5 },
+          "bahncard100": { "minDelayMinutes": 60, "class2Eur": 10, "class1Eur": 15 }
+        }
+      }
+    ],
+    "exemptCauses": [
+      {
+        "validFrom": "2023-06-07",
+        "status": "verified",
+        "note": "DB-FAQ zu Art. 19 Abs. 10 VO 2021/782: Einwirkung Dritter (Personen im Gleis, Kabeldiebstahl, Polizeieinsätze, Bombenentschärfung) und außergewöhnliche Umstände wie große Naturkatastrophen. Streik zählt ausdrücklich nicht. Weitere Fälle der Verordnung (z. B. extreme Witterung, Gesundheitskrisen) nicht aufgenommen, weil der Verordnungstext nicht abrufbar war.",
+        "sources": [
+          { "title": "Deutsche Bahn: FAQ Fahrgastrechte", "url": "https://bahn.de/faq/pk/service/buchung/fahrgastrechte", "reference": "Art. 19 Abs. 10 VO (EU) 2021/782" }
+        ],
+        "value": { "causes": ["third_party", "natural_disaster"] }
+      }
+    ],
+    "fullRefund": [
+      {
+        "validFrom": "2023-06-07",
+        "status": "verified",
+        "note": "bahn.de: Bei erwarteter Verspätung am Ziel von mind. 60 Minuten: volle Erstattung bei Nichtantritt, anteilig bei Teilstrecke.",
+        "sources": [
+          {
+            "title": "Deutsche Bahn: Fahrgastrechte – rechtliche Regelungen",
+            "url": "https://www.bahn.de/service/informationen-buchung/fahrgastrechte/rechtliche-regelungen"
+          }
+        ],
+        "value": { "minExpectedDelayMinutes": 60 }
+      }
+    ],
+    "claimDeadline": [
+      {
+        "validFrom": "2023-06-07",
+        "status": "verified",
+        "note": "bahn.de nennt 3 Monate nach dem Vorfall (VO 2021/782) und nimmt 'bis auf Weiteres' auch später an (Orientierung 12 Monate); die DB-FAQ nennt 12 Monate. Die App zeigt die sichere Frist von 3 Monaten.",
+        "sources": [
+          {
+            "title": "Deutsche Bahn: Fahrgastrechte – rechtliche Regelungen",
+            "url": "https://www.bahn.de/service/informationen-buchung/fahrgastrechte/rechtliche-regelungen",
+            "reference": "Frist zur Einreichung von Beschwerden"
+          }
+        ],
+        "value": { "amount": 3, "unit": "months", "from": "journey_date" }
+      }
+    ],
+    "submission": [
+      {
+        "validFrom": "2023-06-07",
+        "status": "verified",
+        "sources": [
+          { "title": "Deutsche Bahn: Wie kann ich meine Entschädigung beantragen?", "url": "https://www.bahn.de/faq/wie-kann-ich-meine-entschaedigung-beantragen" }
+        ],
+        "value": {
+          "channels": [
+            {
+              "kind": "online",
+              "label": {
+                "de": "Online im DB-Kundenkonto oder in der App DB Navigator („Meine Reisen“ → „Entschädigung beantragen“)",
+                "en": "Online in your DB account or the DB Navigator app (“My trips” → “Request compensation”)"
+              },
+              "url": "https://www.bahn.de/faq/wie-kann-ich-meine-entschaedigung-beantragen"
+            },
+            {
+              "kind": "post",
+              "label": {
+                "de": "Per Post mit dem Fahrgastrechte-Formular",
+                "en": "By post with the passenger rights form"
+              },
+              "postalAddress": ["DB Fernverkehr AG", "Servicecenter Fahrgastrechte", "60647 Frankfurt am Main"]
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

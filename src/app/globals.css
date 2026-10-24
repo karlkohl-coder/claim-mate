@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+/*
+ * Claim Mate – Design-Tokens nach Stylesheet.
+ * Schwarz als Hauptfarbe für Header und Hauptaktionen, Blau für Erstattung/Links,
+ * Grün für Soforthilfe und Erfolg, Rot für Fristen und Fehler.
+ * Im Code nur die Token-Klassen verwenden (bg-surface, text-ink, bg-brand-tint …).
+ */
+:root {
+  --surface: #ffffff;
+  --ink: #0b0b0c;
+  --muted: #6b6b72;
+  --line: #e8e8ec;
+  --card: #ffffff;
+  --soft: #f4f4f6;
+  --brand: #2d54e5;
+  --brand-tint: #eef1fd;
+  --brand-line: #ccd6f8;
+  --ok: #3c9a4c;
+  --ok-tint: #edf8f0;
+  --ok-line: #c3e6cb;
+  --bad: #e0483d;
+  --bad-tint: #fdeeed;
+  --warn: #f0a52a;
+  --ink-on-warn: #2b2006;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #0f0f11;
+    --ink: #f2f2f4;
+    --muted: #9b9ba3;
+    --line: #26262b;
+    --card: #17171a;
+    --soft: #1d1d21;
+    --brand: #6f8cff;
+    --brand-tint: #161c33;
+    --brand-line: #2b3666;
+    --ok: #5cc06d;
+    --ok-tint: #13261a;
+    --ok-line: #24492e;
+    --bad: #f0786e;
+    --bad-tint: #2c1716;
+    --warn: #f2b84a;
+    --ink-on-warn: #2b2006;
+  }
+}
+
+@theme inline {
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-card: var(--card);
+  --color-soft: var(--soft);
+  --color-brand: var(--brand);
+  --color-brand-tint: var(--brand-tint);
+  --color-brand-line: var(--brand-line);
+  --color-ok: var(--ok);
+  --color-ok-tint: var(--ok-tint);
+  --color-ok-line: var(--ok-line);
+  --color-bad: var(--bad);
+  --color-bad-tint: var(--bad-tint);
+  --color-warn: var(--warn);
+  --color-ink-on-warn: var(--ink-on-warn);
+  --font-sans: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background: var(--surface);
+  color: var(--ink);
+}
+
+/* Große Überschriften wie im Stylesheet: sehr fett, eng gesetzt. */
+.display {
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
